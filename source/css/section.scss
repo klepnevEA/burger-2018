@@ -1,0 +1,48 @@
+.section {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	min-height: 650px;
+	background-size: cover;
+	background-repeat: no-repeat; 
+	background-position:  center; 
+	
+	&__container {
+		margin: 0 auto;
+		max-width: 960px;
+		padding: 0 10px; 
+		
+		&_advantages {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 auto; 
+		}
+	}
+	
+	&_burger {
+		position: relative;
+		background-image: url('../img/bg/first-screen.jpg');
+		
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-repeat: repeat;
+			background-image: url('../img/bg/first-screen-texture.png');  
+		}
+	}
+
+	&_advantages {
+		background-image: url('../img/bg/bg.jpg');
+		
+		&:after {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+	}
+}

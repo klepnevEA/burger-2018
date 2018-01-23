@@ -1,0 +1,38 @@
+.advantages {
+	
+	&__list {
+		display: flex;
+	}
+
+	&__elem {
+		flex: 1 1 600px;
+	}
+
+	&__img {
+		height: 100px;
+		margin-bottom: 23px;
+	}
+	
+	&__icon {
+		width: 93px;
+		height: 90px;
+		
+	}
+
+	&__title {
+		font-family: 'Lifehack-Medium';
+		color: $black;
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		color: $black;
+		font-size: 14px;
+		font-family: 'Ubuntu-Light';
+		line-height: 1.8;
+		padding: 0 10px;
+	}
+}
+
+
