@@ -1,0 +1,95 @@
+.team {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding: 114px 95px;
+	width: 50%;
+	background-color: rgba(31,33,34,0.93);
+	text-align: left;
+	
+	&__elem {
+		margin-bottom: 20px;
+		
+		&_active {
+			margin-bottom: 40px;
+			.team {
+				&__drop {
+					max-height: 10000px; 
+				}
+
+				&__name {
+					color: $ellow;
+				}
+
+				&__triangle {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+	
+	
+	&__btn {
+		display: flex;
+		align-items: center;
+		padding-bottom: 10px;
+		
+	}
+	
+	&__triangle {
+		width: 0;
+		height: 0;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 7px solid $ellow;
+		box-sizing: content-box; 
+		margin-right: 10px;
+	}
+
+	&__name {
+		font-family: 'Gagalin-Regular';
+		font-size: 14px;
+		color: #fff;
+	}
+
+	&__drop {
+		max-height: 0;
+		overflow: hidden;
+		padding: 0 15px;
+		@extend %clearfix;
+		transition: 5.5s;
+	}
+
+	&__img {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%; 
+		background-position: center;
+		background-size: cover; 
+		margin-right: 20px;
+		margin-top: 3px;
+		float: left;
+		 
+	}
+
+	&__info {
+		float: left;
+		width: calc(100% - 120px); 
+	}
+
+	&__position {
+		color: #fff;
+		font-family: 'Ubuntu-Bold';
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		color: #fff;
+		font-family: 'Ubuntu-Light';
+		line-height: 1.5;
+	}
+}
+
+
+

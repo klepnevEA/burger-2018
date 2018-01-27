@@ -12,7 +12,8 @@
 		max-width: 960px;
 		padding: 0 10px; 
 		
-		&_advantages {
+		&_advantages,
+		&_order {
 			display: inline-block;
 			vertical-align: middle;
 			margin: 0 auto; 
@@ -35,8 +36,29 @@
 		}
 	}
 
-	&_advantages {
+	&_advantages
+	 {
 		background-image: url('../img/bg/bg.jpg');
+		
+		&:after {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+	}
+
+	&_team {
+		background-image: url('../img/bg/SBS_1255-X2.jpg'); 
+	}
+
+	&_menu {
+		background-image: url('../img/bg/menu.jpg');
+		padding: 80px; 
+	}
+
+	&_order {
+		background-image: url('../img/bg/order.jpg');
 		
 		&:after {
 			content: '';
