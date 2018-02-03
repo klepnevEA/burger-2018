@@ -4,7 +4,13 @@
 	align-items	: center;
 	height: 90px;
 	padding: 10px 0px;
-	z-index: 10;
+	z-index: 100;
+	
+	@include tablets() {
+		.btn {
+			margin-left: auto;
+		}
+	}
 }
 
 

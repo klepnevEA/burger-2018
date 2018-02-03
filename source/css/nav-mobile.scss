@@ -1,0 +1,93 @@
+.nav-mobile {
+	display: none;
+	position: relative;
+	z-index: 900;
+	width: 25px;
+	height: 25px;
+	margin-left: 20px;
+	margin-right: 2vw;
+
+	
+	&_active {
+		.nav-mobile__drop {
+			top: 0;
+		}
+	}
+	
+	&__btn {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: stretch; 
+		width: 100%;
+		height: 100%;
+
+		z-index: 1000;
+	}
+
+	&__btn-decor {
+		display: inline-block;
+		height: 3px;
+		border-radius: 3px; 
+		background-color: #fff; 
+	}
+	
+
+	&__drop {
+		position: fixed;
+		display: flex;
+		justify-content: center; 
+		align-items: center; 
+		top: -100%;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: #2f3234;
+		z-index: 100;
+	}
+
+	&__elem {
+
+		&:last-child {
+			.nav-mobile__link {
+				&:after {
+					content: none;
+				}
+			}
+		}
+
+		
+	}
+
+	&__link {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		color: #fff;
+		padding: 20px;
+		text-transform: uppercase;
+		font-family: 'Ubuntu-Light';
+		font-size: rem(24px); 
+		line-height:  rem(24px);
+
+		
+
+		&:after {
+			content: '';
+			position: absolute;
+			display: inline-block;
+			width: 4px;
+			height: 4px;
+			bottom: 0;
+			left: 50%;
+			border-radius: 50%; 
+			transform: translate(-50%, -50%);
+			background-color: #fff; 
+		}
+	}
+
+	@include tablets() {
+		display: block;
+	}
+}

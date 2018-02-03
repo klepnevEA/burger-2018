@@ -1,7 +1,8 @@
 .title {
-	line-height: 1.8;
+	line-height: 1.2;
+	margin-bottom: 20px;
 	color: $ellow;
-	font-size: 72px;
+	font-size: rem(72px);
 	font-family: 'Gagalin-Regular';
 	text-transform: uppercase;
 	
@@ -23,6 +24,17 @@
 
 	&_mb-20 {
 		margin-bottom: 20px;
+	}
+
+	&_slider {
+		color: #fff;
+		text-align: left;
+		line-height: 1;
+		margin-bottom: 10px;
+		
+		@include tablets() { 
+			text-align: center;
+		}
 	}
 }
 

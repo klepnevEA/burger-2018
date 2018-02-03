@@ -8,6 +8,12 @@
 	background-color: rgba(31,33,34,0.93);
 	text-align: left;
 	
+			@include tablets() { 
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	
 	&__elem {
 		margin-bottom: 20px;
 		
@@ -35,6 +41,10 @@
 		align-items: center;
 		padding-bottom: 10px;
 		
+		@include tablets() { 
+			justify-content: center;
+		}
+		
 	}
 	
 	&__triangle {
@@ -49,16 +59,21 @@
 
 	&__name {
 		font-family: 'Gagalin-Regular';
-		font-size: 14px;
+		font-size: rem(14px);
 		color: #fff;
 	}
 
 	&__drop {
+		display: flex;
 		max-height: 0;
 		overflow: hidden;
 		padding: 0 15px;
-		@extend %clearfix;
 		transition: 5.5s;
+		
+		@include tablets() { 
+			flex-direction: column; 
+			align-items: center;
+		}
 	}
 
 	&__img {
@@ -69,13 +84,21 @@
 		background-size: cover; 
 		margin-right: 20px;
 		margin-top: 3px;
-		float: left;
-		 
+		
+		@include tablets() { 
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+
 	}
 
 	&__info {
-		float: left;
 		width: calc(100% - 120px); 
+		
+		@include tablets() { 
+			text-align: center;
+			width: 100%;
+		}	
 	}
 
 	&__position {
@@ -88,6 +111,14 @@
 		color: #fff;
 		font-family: 'Ubuntu-Light';
 		line-height: 1.5;
+	}
+
+	@include tablets() { 
+		width: 100%;
+		
+		.title {
+			text-align: center;
+		}
 	}
 }
 

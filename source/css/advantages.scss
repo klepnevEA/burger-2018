@@ -2,10 +2,20 @@
 	
 	&__list {
 		display: flex;
+		
+			@include phones() { 
+				flex-direction: column; 
+				align-items: center;
+			}
 	}
 
 	&__elem {
-		flex: 1 1 600px;
+		flex: 1 1 auto;
+		
+		@include phones() { 
+			width: 80%;
+			margin-bottom: 20px; 
+		}
 	}
 
 	&__img {
@@ -34,17 +44,16 @@
 	&__title {
 		font-family: 'Lifehack-Medium';
 		color: $black;
-		font-size: 24px;
+		font-size: rem(24px);
 		margin-bottom: 20px;
 	}
 
 	&__text {
 		color: $black;
-		font-size: 14px;
+		font-size: rem(14px);
 		font-family: 'Ubuntu-Light';
 		line-height: 1.8;
 		padding: 0 10px;
 	}
 }
-
 

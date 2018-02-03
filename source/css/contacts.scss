@@ -8,16 +8,24 @@
 	text-align: left;
 	padding: 5px 0;
 	
+		@include tablets() { 
+			align-items: center;
+			margin-bottom: 20px;
+		}
+	
 	&__address {
+		display: inline-block;
 		color: #fff;
 		font-family: 'Ubuntu-Light';
-		font-size: 14px;
+		font-size: rem(14px);
+		
+
 	}
 
 	&__tel {
 		color: $orange;
 		font-family: 'Ubuntu-Bold';
-		font-size: 14px;
+		font-size: rem(14px);
 	}
 
 	&__icon {

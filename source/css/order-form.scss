@@ -2,21 +2,41 @@
 	&__wrap {
 		display: flex;
 		margin: 0 -10px;
+		
+		@include tablets() { 
+			flex-direction: column;
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		@include phones() { 
+			flex-direction: column;
+			width: 100%;
+			margin: 0 auto;
+		}
 	}
 
 	&__col {
 		width: 50%;
 		
+				@include tablets() { 
+			width: 100%;
+		}
+		
 	}
 
 	&__row {
 		display: flex;
+		
+		@include tablets() { 
+			justify-content: center;
+		}
 	}
 
 	&__lebel {
 		text-align: left;
 		font-family: 'Ubuntu-Light';
-		font-size: 14px;
+		font-size: rem(14px);
 		color: #fff;
 		margin-bottom: 5px;
 	}
@@ -36,7 +56,7 @@
 		border-radius: 5px;	
 		padding: 8px; 
 		font-family: 'Ubuntu-Light';
-		font-size: 14px;
+		font-size: rem(14px);
 		
 		&:focus {
 			border-color: $ellow;
@@ -94,7 +114,7 @@
 	&__radio-title {
 		color: #fff;
 		font-family: 'Ubuntu-Light';
-		font-size: 14px;
+		font-size: rem(14px);
 	}
 
 	&__radio_checkbox .order-form__radio-elem + .order-form__radio-fake{

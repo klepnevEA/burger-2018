@@ -11,8 +11,10 @@
 
 	&__elem {
 		position: relative;
-		flex: 1 1 25%;
+		width: 25%;
 		height: 50%;
+		
+
 		
 		&:hover {
 			.reviews {
@@ -25,6 +27,11 @@
 					opacity: 1;
 				}
 			}
+		}
+
+		@include tablets() { 
+			width: 50%;
+			height: 25%;
 		}
 	}
 
@@ -51,7 +58,7 @@
 	}
 
 	&__title {
-		font-size: 14px;
+		font-size: rem(14px);
 		font-family: 'Gagalin-Regular';
 		text-align: left;
 		color: #fff;
@@ -59,7 +66,7 @@
 	}
 
 	&__text {
-		font-size: 14px;
+		font-size: rem(14px);
 		font-family: 'Ubuntu-Light';
 		line-height: 2.4;
 		text-align: left;

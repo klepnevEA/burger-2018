@@ -5,6 +5,10 @@
 	right: 0;
 	width: 70%;
 	
+	@include tablets() { 
+		width: 100%;
+	}
+	
 	&__list {
 		display: flex;
 		align-items: stretch;
@@ -42,7 +46,7 @@
 		left: 50%;
 		color: #fff;
 		font-family: 'Gagalin-Regular';
-		font-size: 40px;
+		font-size: rem(40px);
 		white-space: nowrap;
 		transform: rotate(-90deg) translateY(-50%);
 		transform-origin: 0 0;
@@ -59,7 +63,7 @@
 
 	&__text {
 		padding: 60px 35px;
-		font-size: 14px;
+		font-size: rem(14px);
 		color: #fff;
 		font-family: 'Ubuntu-Light';
 		line-height: 2;

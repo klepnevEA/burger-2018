@@ -10,3 +10,11 @@
 @media (max-width: 995px) {
 
 }
+
+@media screen and (max-width: $phones) {
+	.logo {
+		&__img {
+	  		width: 10px;
+	  	}
+	}
+}
